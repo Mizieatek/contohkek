@@ -2,6 +2,7 @@
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     color: #1e293b;
     position: relative;
     overflow-x: hidden;
+    margin: 0;
 }
 
 /* Dynamic Background Animation */
@@ -50,8 +52,8 @@ body::after {
 
 @keyframes floatingBubbles {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    33% { transform: translate(30px, -30px) rotate(120deg); }
-    66% { transform: translate(-20px, 20px) rotate(240deg); }
+    33% { transform: translate(10px, -10px) rotate(120deg); }
+    66% { transform: translate(-10px, 10px) rotate(240deg); }
 }
 
 /* Navigation */
@@ -64,7 +66,7 @@ body::after {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
 }
 
 .nav-link {
@@ -74,7 +76,8 @@ body::after {
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -106,14 +109,14 @@ body::after {
     padding: 0.75rem 1.5rem;
     border-radius: 0.75rem;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.5rem;
+    min-height: 2.25rem;
     text-decoration: none;
 }
 
@@ -158,10 +161,10 @@ body::after {
     border-radius: 0.75rem;
     padding: 0.75rem 1rem;
     color: #334155;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
     width: 100%;
-    min-height: 2.5rem;
+    min-height: 2.25rem;
 }
 
 .input:focus {
@@ -195,9 +198,9 @@ body::after {
 }
 
 .mobile-menu .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 1rem;
-    width: 80%;
+    width: 90%;
     text-align: center;
     border-radius: 0.5rem;
 }
@@ -213,10 +216,10 @@ body::after {
 }
 
 .mobile-nav-btn div {
-    width: 24px;
-    height: 3px;
+    width: 20px;
+    height: 2px;
     background: #1e293b;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     transition: all 0.3s ease;
 }
 
@@ -226,7 +229,7 @@ body::after {
 
 /* Hamburger animation for active state */
 .mobile-nav-btn.active div:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(4px, 4px);
 }
 
 .mobile-nav-btn.active div:nth-child(2) {
@@ -234,9 +237,10 @@ body::after {
 }
 
 .mobile-nav-btn.active div:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Mobile-specific styles */
 @media (max-width: 640px) {
     .desktop-nav {
         display: none;
@@ -246,40 +250,61 @@ body::after {
         display: block;
     }
 
-    .max-w-6xl {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar .max-w-7xl {
+        max-width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.2;
     }
 
     .hero-section p {
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 
-    .grid-cols-1-md-3, .grid-cols-1-md-2, .grid-cols-1-md-4, .grid-cols-1-lg-3 {
+    .btn, .btn-outline {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        min-height: 2rem;
+    }
+
+    .grid-cols-3 {
         grid-template-columns: 1fr;
     }
 
-    .navbar .max-w-6xl {
-        max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .card {
+        padding: 1rem;
     }
 
-    .navbar .flex.items-center.space-x-3 {
-        flex-grow: 1;
-    }
-
-    .navbar .text-xl {
+    .text-2xl {
         font-size: 1.25rem;
     }
 
-    .navbar img {
-        height: 2.5rem;
+    .text-xl {
+        font-size: 1rem;
+    }
+
+    .text-lg {
+        font-size: 0.875rem;
+    }
+
+    .text-base {
+        font-size: 0.75rem;
+    }
+
+    .text-sm {
+        font-size: 0.7rem;
+    }
+
+    .text-xs {
+        font-size: 0.65rem;
     }
 }
 
