@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #f8fafc;
+    background: #FFFFFF;
     line-height: 1.6;
-    color: #1e293b;
+    color: #1B5E20;
     position: relative;
     overflow-x: hidden;
     margin: 0;
@@ -23,7 +23,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #e0f2fe, #f0f9ff, #fed7aa, #dbeafe, #f0f9ff);
+    background: linear-gradient(45deg, #E8F5E9, #C8E6C9, #A5D6A7, #E8F5E9, #C8E6C9);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     z-index: -2;
@@ -37,9 +37,9 @@ body::after {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(46, 125, 50, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(102, 187, 106, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(46, 125, 50, 0.1) 0%, transparent 50%);
     animation: floatingBubbles 20s ease-in-out infinite;
     z-index: -1;
 }
@@ -60,7 +60,7 @@ body::after {
 .navbar {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(27, 94, 32, 0.08);
     position: fixed;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@ body::after {
 }
 
 .nav-link {
-    color: #64748b;
+    color: #4CAF50;
     text-decoration: none;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
@@ -81,14 +81,14 @@ body::after {
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #f97316;
-    background: rgba(249, 115, 22, 0.1);
+    color: #2E7D32;
+    background: rgba(46, 125, 50, 0.1);
 }
 
 /* Cards */
 .card {
     background: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(249, 115, 22, 0.15);
+    border: 2px solid rgba(46, 125, 50, 0.15);
     border-radius: 1.25rem;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
@@ -97,14 +97,14 @@ body::after {
 
 .card:hover {
     background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(249, 115, 22, 0.3);
+    border-color: rgba(46, 125, 50, 0.3);
     transform: translateY(-8px);
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
 }
 
 /* Buttons */
 .btn {
-    background: #f97316;
+    background: #4CAF50;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.75rem;
@@ -121,20 +121,20 @@ body::after {
 }
 
 .btn:hover {
-    background: #ea580c;
+    background: #388E3C;
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(249, 115, 22, 0.25);
+    box-shadow: 0 12px 24px rgba(76, 175, 80, 0.25);
 }
 
 .btn-outline {
     background: transparent;
-    border: 2px solid rgba(249, 115, 22, 0.5);
-    color: #f97316;
+    border: 2px solid rgba(46, 125, 50, 0.5);
+    color: #4CAF50;
 }
 
 .btn-outline:hover {
-    background: rgba(249, 115, 22, 0.1);
-    border-color: #f97316;
+    background: rgba(46, 125, 50, 0.1);
+    border-color: #2E7D32;
 }
 
 /* Page transitions */
@@ -157,10 +157,10 @@ body::after {
 /* Form Inputs */
 .input {
     background: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(27, 94, 32, 0.08);
     border-radius: 0.75rem;
     padding: 0.75rem 1rem;
-    color: #334155;
+    color: #1B5E20;
     font-size: 0.85rem;
     transition: all 0.3s ease;
     width: 100%;
@@ -169,9 +169,9 @@ body::after {
 
 .input:focus {
     outline: none;
-    border-color: #f97316;
+    border-color: #4CAF50;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1);
 }
 
 /* Mobile menu */
@@ -205,7 +205,6 @@ body::after {
     border-radius: 0.5rem;
 }
 
-/* Hamburger button */
 .mobile-nav-btn {
     display: none;
     padding: 0.5rem;
@@ -218,7 +217,7 @@ body::after {
 .mobile-nav-btn div {
     width: 20px;
     height: 2px;
-    background: #1e293b;
+    background: #1B5E20;
     margin-bottom: 4px;
     transition: all 0.3s ease;
 }
@@ -227,7 +226,6 @@ body::after {
     margin-bottom: 0;
 }
 
-/* Hamburger animation for active state */
 .mobile-nav-btn.active div:nth-child(1) {
     transform: rotate(45deg) translate(4px, 4px);
 }
@@ -240,7 +238,6 @@ body::after {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile-specific styles */
 @media (max-width: 640px) {
     .desktop-nav {
         display: none;
@@ -320,7 +317,7 @@ body::after {
 
 /* Gradient text */
 .gradient-text {
-    background: linear-gradient(135deg, #3b82f6, #f97316);
+    background: linear-gradient(135deg, #2E7D32, #66BB6A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
